@@ -82,13 +82,9 @@ in {
     pkgs.gh
 
     # Terminal
-    pkgs.nerdfonts
     pkgs.alacritty
     pkgs.alacritty-theme
     pkgs.ghostty
-
-    # Other Tools
-    pkgs.ventoy
 
     # Office
     pkgs.libreoffice

@@ -1,7 +1,7 @@
 {
   # config,
   # lib,
-  # pkgs,
+  pkgs,
   # inputs,
   ...
 }: {
@@ -48,4 +48,9 @@
   # nixpkgs.config.permittedInsecurePackages = [
   #   "segger-jlink-qt4-796s"
   # ];
+
+  fonts.packages = [
+    pkgs.nerd-fonts.jetbrains-mono
+    # pkgs.nerd-fonts.zed-mono
+  ];
 }
