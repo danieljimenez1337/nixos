@@ -30,6 +30,7 @@ in {
     ../modules/vscode
     ../modules/cli
     ../modules/helix
+    ../modules/alacritty
   ];
 
   # _module.args.inputs = inputs;
@@ -57,37 +58,30 @@ in {
     # Web Browsers
     pkgs.chromium
 
-    # Electrical
-    pkgs-unstable.kicad
-
     # Media Software
     pkgs.darktable
-
-    # Discord
-    pkgs.vesktop
 
     # Programming
     pkgs-unstable.devenv
     pkgs.direnv
     pkgs.python313
-    pkgs.erlang
-    pkgs-unstable.gleam
     pkgs.rustup
     pkgs.gcc
     pkgs.gnumake
-    pkgs-unstable.zig
     pkgs.nodejs_22
     pkgs-unstable.zed-editor
     pkgs.nixd
     pkgs.gh
 
     # Terminal
-    pkgs.alacritty
-    pkgs.alacritty-theme
     pkgs.ghostty
 
     # Office
     pkgs.libreoffice
+
+    # Desktop Env
+    pkgs.wofi
+    pkgs.hyprpaper
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -137,16 +131,6 @@ in {
 
     vim_keys = False
   '';
-
-  programs.alacritty.enable = true;
-  programs.alacritty.settings = {
-    window.padding.x = 30;
-    window.padding.y = 30;
-    font.normal.family = "JetBrainsMonoNL Nerd Font";
-    font.normal.style = "Regular";
-    window.opacity = 0.9;
-    general.import = ["${pkgs.alacritty-theme}/kanagawa_wave.toml"];
-  };
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. If you don't want to manage your shell through Home
