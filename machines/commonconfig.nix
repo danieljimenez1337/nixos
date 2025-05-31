@@ -82,13 +82,8 @@
     zip
     unzip
     libarchive
-    tailscale
   ];
 
   virtualisation.docker.enable = true;
 
-  services.tailscale.enable = true;
-  services.tailscale.port = 12345;
-  networking.firewall.allowedUDPPorts = [12345];
-  # services.tailscale.useRoutingFeatures = "client";
 }
