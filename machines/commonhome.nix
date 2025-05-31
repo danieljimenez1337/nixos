@@ -58,9 +58,6 @@ in {
     # Web Browsers
     pkgs.chromium
 
-    # Media Software
-    pkgs.darktable
-
     # Programming
     pkgs-unstable.devenv
     pkgs.direnv
@@ -72,12 +69,6 @@ in {
     pkgs-unstable.zed-editor
     pkgs.nixd
     pkgs.gh
-
-    # Terminal
-    pkgs.ghostty
-
-    # Office
-    pkgs.libreoffice
 
     # Desktop Env
     pkgs.wofi
@@ -113,18 +104,8 @@ in {
     };
   };
 
-  xdg.configFile."ghostty/config".text = ''
-    window-padding-x = 20
-    window-padding-y = 10
-    theme = "Kanagawa Wave"
-    font-family = "JetBrainsMonoNL Nerd Font"
-    background-opacity = 0.9
-    clipboard-paste-protection = false
-    font-size = 20
-  '';
-
   xdg.configFile."btop/btop.conf".text = ''
-    color_theme = "${pkgs.btop}/share/btop/themes/tokyo-night.theme"
+    color_theme = "${pkgs.btop}/share/btop/themes/gruvbox_dark_v2.theme"
 
     #* If the theme set background should be shown, set to False if you want terminal background transparency.
     theme_background = False
