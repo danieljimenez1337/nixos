@@ -2,19 +2,20 @@
 {
   home.packages = [
     # Cli Tools
-    pkgs.git
-    pkgs.ripgrep
-    pkgs.fd
-    pkgs.zellij
-    pkgs.gh
     pkgs.btop
-    pkgs.yazi
-    pkgs.fzf
     pkgs.fastfetch
+    pkgs.fd
+    pkgs.fzf
+    pkgs.gh
+    pkgs.git
+    pkgs.jq
     pkgs.just
     pkgs.oxker
-    pkgs.tokei
     pkgs.rip2
+    pkgs.ripgrep
+    pkgs.tokei
+    pkgs.yazi
+    pkgs.zellij
     pkgs.zoxide
   ];
 
