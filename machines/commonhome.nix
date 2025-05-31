@@ -29,7 +29,6 @@ in {
     ../modules/fish
     ../modules/vscode
     ../modules/cli
-    ../modules/helix
     ../modules/alacritty
   ];
 
