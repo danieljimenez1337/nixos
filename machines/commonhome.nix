@@ -71,8 +71,9 @@ in {
     pkgs.gh
 
     # Desktop Env
-    pkgs.wofi
+    pkgs.rofi-wayland
     pkgs.hyprpaper
+    pkgs.waybar
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
