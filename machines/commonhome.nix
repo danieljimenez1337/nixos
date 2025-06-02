@@ -27,7 +27,6 @@ in {
     ../modules/zsh
     ../modules/gnome
     ../modules/fish
-    ../modules/vscode
     ../modules/cli
     ../modules/alacritty
   ];
@@ -65,14 +64,19 @@ in {
     pkgs.gcc
     pkgs.gnumake
     pkgs.nodejs_22
-    pkgs-unstable.zed-editor
     pkgs.nixd
     pkgs.gh
+
+    # Editors
+    pkgs-unstable.zed-editor
+    pkgs.windsurf
+    pkgs.code-cursor
 
     # Desktop Env
     pkgs.rofi-wayland
     pkgs.hyprpaper
     pkgs.waybar
+    pkgs.kdePackages.dolphin
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
