@@ -23,12 +23,13 @@ in {
 
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
+    ../modules/alacritty
+    ../modules/cli
+    ../modules/fish
+    ../modules/gnome
+    ../modules/hyprland
     ../modules/neovim
     ../modules/zsh
-    ../modules/gnome
-    ../modules/fish
-    ../modules/cli
-    ../modules/alacritty
   ];
 
   # _module.args.inputs = inputs;
@@ -71,12 +72,6 @@ in {
     pkgs-unstable.zed-editor
     pkgs.windsurf
     pkgs.code-cursor
-
-    # Desktop Env
-    pkgs.rofi-wayland
-    pkgs.hyprpaper
-    pkgs.waybar
-    pkgs.kdePackages.dolphin
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
