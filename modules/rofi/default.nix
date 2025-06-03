@@ -24,17 +24,18 @@ in {
       display-window = " ";
       drun-display-format = "{name}";
       window-format = "{w}{t}";
-      font = "JetBrainsMono Nerd Font 10";
+      font = "JetBrainsMono Nerd Font 12";
       icon-theme = "Tela-circle";
     };
 
+    # inspired by https://github.com/HyDE-Project/HyDE/blob/master/Configs/.local/share/hyde/rofi/themes/style_11.rasi
     theme = mkForce {
       "*" = {
-        main-bg = mkLiteral "#282828FF";
+        main-bg = mkLiteral "#282828CC";
         main-fg = mkLiteral "#CBCED3FF";
         main-br = mkLiteral "#EBDBB2FF";
         main-ex = mkLiteral "#85A583FF";
-        select-bg = mkLiteral "#475437FF";
+        select-bg = mkLiteral "#427B58FF";
         select-fg = mkLiteral "#B5CC97FF";
         separatorcolor = mkLiteral "transparent";
         border-color = mkLiteral "transparent";
@@ -49,16 +50,18 @@ in {
         cursor = "default";
         spacing = mkLiteral "0em";
         padding = mkLiteral "0em";
-        border-color = mkLiteral "@main-br";
-        background-color = mkLiteral "transparent";
+        border = mkLiteral "0px";
+        border-radius = mkLiteral "1em 1em 1em 1em";
+        background-color = mkLiteral "@main-bg";
       };
 
       mainbox = {
         enabled = true;
         spacing = mkLiteral "0em";
+        padding = mkLiteral "0.8em";
         orientation = mkLiteral "horizontal";
         children = map mkLiteral ["inputbar" "listbox"];
-        background-color = mkLiteral "transparent";
+        background-color = mkLiteral "#00000003";
       };
 
       inputbar = {
@@ -70,7 +73,7 @@ in {
         expand = false;
         background-color = mkLiteral "@main-bg";
         background-image = mkLiteral "url(\"/home/danielj/nixos/modules/hyprland/background.png\", height)";
-        border-radius = mkLiteral "1em 0em 0em 1em";
+        border-radius = mkLiteral "1em";
       };
 
       entry = {
@@ -81,7 +84,7 @@ in {
         spacing = mkLiteral "0em";
         padding = mkLiteral "0em";
         children = map mkLiteral ["dummy" "listview" "dummy"];
-        background-color = mkLiteral "@main-bg";
+        background-color = mkLiteral "transparent";
         border-radius = mkLiteral "0em 1em 1em 0em";
       };
 

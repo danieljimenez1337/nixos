@@ -4,6 +4,11 @@
   monitors,
   ...
 }: {
+ home.packages = with pkgs; [
+   hyprpicker
+   grimblast
+ ];
+
   imports = [
     ../rofi
   ];
