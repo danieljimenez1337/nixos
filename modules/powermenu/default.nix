@@ -6,19 +6,19 @@
     rofi-wayland
     (pkgs.writeScriptBin "powermenu" ''
       #!/usr/bin/env bash
-      options="⏻ Shutdown\n⟲ Reboot\n🔒 Lock\n⏏ Logout"
+      options="Shutdown\nReboot\nLock\nLogout"
       chosen=$(echo -e "$options" | ${pkgs.rofi-wayland}/bin/rofi -dmenu -i -p "Power Menu")
       case $chosen in
-          "⏻ Shutdown")
+          "Shutdown")
               ${pkgs.systemd}/bin/systemctl poweroff
               ;;
-          "⟲ Reboot")
+          "Reboot")
               ${pkgs.systemd}/bin/systemctl reboot
               ;;
-          "🔒 Lock")
+          "Lock")
               ${pkgs.systemd}/bin/loginctl lock-session
               ;;
-          "⏏ Logout")
+          "Logout")
               ${pkgs.hyprland}/bin/hyprctl dispatch exit
               ;;
       esac

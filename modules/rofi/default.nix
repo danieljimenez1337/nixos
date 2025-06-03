@@ -7,21 +7,17 @@
   inherit (lib) mkForce;
   inherit (config.lib.formats.rasi) mkLiteral;
 in {
-  home.packages = with pkgs; [
-    tela-circle-icon-theme
-  ];
-
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
 
     extraConfig = {
       modi = "drun,filebrowser,window,run";
-      show-icons = true;
-      display-drun = " ";
-      display-run = " ";
-      display-filebrowser = " ";
-      display-window = " ";
+      show-icons = false;
+      display-drun = "";
+      display-run = "";
+      display-filebrowser = "";
+      display-window = "";
       drun-display-format = "{name}";
       window-format = "{w}{t}";
       font = "JetBrainsMono Nerd Font 12";
@@ -126,19 +122,13 @@ in {
         text-color = mkLiteral "@select-fg";
       };
 
-      element-icon = {
-        size = mkLiteral "2.2em";
-        cursor = mkLiteral "inherit";
-        background-color = mkLiteral "transparent";
-        text-color = mkLiteral "inherit";
-      };
-
       element-text = {
         vertical-align = mkLiteral "0.5";
         horizontal-align = mkLiteral "0.0";
         cursor = mkLiteral "inherit";
         background-color = mkLiteral "transparent";
         text-color = mkLiteral "inherit";
+        font = "JetBrainsMono Nerd Font 20";
       };
 
       error-message = {
