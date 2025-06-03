@@ -7,33 +7,11 @@
  home.packages = with pkgs; [
    hyprpicker
    grimblast
-   (pkgs.writeScriptBin "powermenu" ''
-     options="⏻ Shutdown\n⟲ Reboot\n⏸ Suspend\n🔒 Lock\n⏏ Logout"
-
-     chosen=$(echo -e "$options" | ${pkgs.rofi-wayland}/bin/rofi -dmenu -i -p "Power Menu")
-
-     case $chosen in
-         "⏻ Shutdown")
-             ${pkgs.systemd}/bin/systemctl poweroff
-             ;;
-         "⟲ Reboot")
-             ${pkgs.systemd}/bin/systemctl reboot
-             ;;
-         "⏸ Suspend")
-             ${pkgs.systemd}/bin/systemctl suspend
-             ;;
-         "🔒 Lock")
-             # Use loginctl for compatibility, or replace with your preferred locker
-             ${pkgs.systemd}/bin/loginctl lock-session
-             ;;
-         "⏏ Logout")
-             ${pkgs.hyprland}/bin/hyprctl dispatch exit
-             ;;
-     esac      '')
  ];
 
   imports = [
     ../rofi
+    ../powermenu
   ];
 
   programs.waybar = {
