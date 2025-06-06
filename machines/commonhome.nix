@@ -28,6 +28,7 @@ in {
     ../modules/fish
     ../modules/gnome
     ../modules/hyprland
+    ../modules/modali
     ../modules/neovim
     ../modules/zsh
   ];

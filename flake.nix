@@ -15,6 +15,11 @@
       url = "github:nix-community/nixvim/nixos-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    modali-launcher = {
+      url = "github:danieljimenez1337/modali";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {

@@ -60,6 +60,27 @@
         "type": "github"
       }
     },
+    "home-manager_2": {
+      "inputs": {
+        "nixpkgs": [
+          "modali-launcher",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1749160002,
+        "narHash": "sha256-IM3xKjsKxhu7Y1WdgTltrLKiOJS8nW7D4SUDEMNr7CI=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "68cc9eeb3875ae9682c04629f20738e1e79d72aa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
     "ixx": {
       "inputs": {
         "flake-utils": [
@@ -85,6 +106,27 @@
         "owner": "NuschtOS",
         "ref": "v0.0.7",
         "repo": "ixx",
+        "type": "github"
+      }
+    },
+    "modali-launcher": {
+      "inputs": {
+        "home-manager": "home-manager_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1749179326,
+        "narHash": "sha256-pdRGDmHT7YmPMaj4anZUR9ArRZEWXZYy3z6qy7Bpv1s=",
+        "owner": "danieljimenez1337",
+        "repo": "modali",
+        "rev": "fb4eeb662edf70ec824df93a778ee6cf31d340cc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "danieljimenez1337",
+        "repo": "modali",
         "type": "github"
       }
     },
@@ -170,6 +212,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "modali-launcher": "modali-launcher",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nixvim": "nixvim"
