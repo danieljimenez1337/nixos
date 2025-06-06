@@ -117,11 +117,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1749179326,
-        "narHash": "sha256-pdRGDmHT7YmPMaj4anZUR9ArRZEWXZYy3z6qy7Bpv1s=",
+        "lastModified": 1749220839,
+        "narHash": "sha256-1jV3C6WpWEKOoT/nNzs4ZSKTLdxYFCQNHzw07iF/NJM=",
         "owner": "danieljimenez1337",
         "repo": "modali",
-        "rev": "fb4eeb662edf70ec824df93a778ee6cf31d340cc",
+        "rev": "dbc5153310437906cf7f08ca1f7e75f21e74af8f",
         "type": "github"
       },
       "original": {

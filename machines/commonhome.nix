@@ -23,6 +23,7 @@ in {
 
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
+    inputs.modali-launcher.homeManagerModules.default
     ../modules/alacritty
     ../modules/cli
     ../modules/fish
