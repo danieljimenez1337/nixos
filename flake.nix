@@ -17,7 +17,7 @@
     };
 
     modali-launcher = {
-      url = "github:danieljimenez1337/modali";
+      url = "github:danieljimenez1337/modali/rust_port";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
