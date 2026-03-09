@@ -4,7 +4,10 @@
   inputs,
   ...
 }: let
-  pkgs-unstable = inputs.nixpkgs-unstable.legacyPackages.x86_64-linux;
+  pkgs-unstable = import inputs.nixpkgs-unstable {
+    system = "x86_64-linux";
+    config.allowUnfree = true;
+  };
 in {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -69,6 +72,7 @@ in {
     pkgs.nodejs_22
     pkgs.nixd
     pkgs.gh
+    pkgs-unstable.claude-code
 
     # Editors
     pkgs-unstable.zed-editor
